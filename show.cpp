@@ -1,21 +1,15 @@
 #include<iostream>
-#include<bits/stdc++.h>
-#include<conio.h>
-#include<windows.h>
+#include<fstream>
+#include<curses.h>
+#include<unistd.h>
 using namespace std;
 #define hpi asin(1)
-void goto_(int x,int y){
-    HANDLE hOut;
-    hOut = GetStdHandle(STD_OUTPUT_HANDLE);
-    COORD pos={x,y};
-    SetConsoleCursorPosition(hOut,pos);
-}
 struct node{
     double x,y;
     double vx,vy;
 }a,b,c;
 void color(int a){//改变输出的颜色，比system("color x")快得多
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),a);
+	// SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),a);
 /*
 <span style="white-space:pre">	</span>字 
 	1	深蓝色
@@ -54,8 +48,8 @@ void color(int a){//改变输出的颜色，比system("color x")快得多
 */
 }
 void out(int x,int y,char c){
-    goto_(x,y);
-    putchar(c);
+	mvaddch(y,x,c);
+	refresh();
 //  goto_(x,y+1);
 //  putchar(c);
 //  goto_(x,y-1);
@@ -81,6 +75,7 @@ int main(){
     ifstream fin("save.txt");
  //   cin>>k;
  	int f=0;
+	initscr();
     while(1){
     	fin>>x>>y>>t>>k;
     	if(x==-1){
@@ -95,8 +90,9 @@ int main(){
     	else if(k==2) color(10);
     	else color(11);
     	out(x,y,'O');
-    	Sleep(t/800);
+    	usleep(t*5/4);
 	}
+	endwin();
 	fin.close();
 	
     return 0;

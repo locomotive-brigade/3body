@@ -1,7 +1,6 @@
 #include<iostream>
-#include<bits/stdc++.h>
-#include<conio.h>
-#include<windows.h>
+#include<fstream>
+#include<cmath>
 #include<ctime>
 using namespace std;
 #define hpi asin(1)
@@ -72,6 +71,7 @@ int main(){
     double fx,fy;
     int x,y,cx,cy,bx,by;
     int kkk=200000000;
+	auto first=clock();
     while(1){
 //		fx=(750-a.x-b.x-c.y)/3;
 //		fy=(300-a.y-b.y-c.y)/3;
@@ -140,7 +140,7 @@ int main(){
 //        if(abs(a.vx)+abs(a.vy)>400)return 0;
 //        if(abs(b.vx)+abs(b.vy)>400)return 0;
 //        if(abs(c.vx)+abs(c.vy)>400)return 0;
-    	if(clock()>min(max(TIME/1000,(double)10000),(double)100000))break;
+    	if((clock()-first)*1000.0/CLOCKS_PER_SEC>min(max(TIME/1000,(double)10000),(double)100000))break;
 	}
     fout<<"-1 -1 -1";
     fout.close();
