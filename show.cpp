@@ -17,7 +17,7 @@ int main(){
 		fin>>k;
 		Q.push({x,y});
 		if(Q.size()>1000){
-			con.mvprint(Q.front().first,Q.front().second," ");
+			con.mvprint(Q.front().second,Q.front().first," ");
 			Q.pop();
 		}
 		Console::Color *p;

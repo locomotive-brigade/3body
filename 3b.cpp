@@ -85,7 +85,7 @@ int main(){
 		v=10/sqrt(pow(a.x-b.x,2)+pow(a.y-b.y,2))+10/sqrt(pow(a.x-b.x,2)+pow(a.y-b.y,2))+10/sqrt(pow(c.x-b.x,2)+pow(c.y-b.y,2))+1;
 //		x=a.x;y=a.y;
 		v*=v;
-		v*=50;
+		v*=25;
 //		out(x,y,' ');
 		a.x+=a.vx*0.0001/v;
 		a.y+=a.vy*0.0001/v;
