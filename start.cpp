@@ -7,10 +7,18 @@ int main(){
 	system("copy save1.txt save.txt");
 	#else
     system("cp save1.txt save.txt");
-	thread calc([]{
-		system("./3b");
-	});
-	system("./show");
-	calc.join();
 	#endif
+	thread calc([]{
+		#ifdef WIN_OS
+		system("3b");
+		#else
+		system("./3b");
+		#endif
+	});
+		#ifdef WIN_OS
+		system("show");
+		#else
+		system("./show");
+		#endif
+	calc.join();
 }

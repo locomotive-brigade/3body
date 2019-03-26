@@ -1,5 +1,6 @@
 #include<iostream>
 #include<fstream>
+#include<algorithm>
 #include<cmath>
 #include<ctime>
 using namespace std;
@@ -140,7 +141,7 @@ int main(){
 //        if(abs(a.vx)+abs(a.vy)>400)return 0;
 //        if(abs(b.vx)+abs(b.vy)>400)return 0;
 //        if(abs(c.vx)+abs(c.vy)>400)return 0;
-    	if((clock()-first)*1000.0/CLOCKS_PER_SEC>min(max(TIME/1000,(double)10000),(double)100000))break;
+    	if((clock()-first)*1000.0/CLOCKS_PER_SEC>(std::min)((std::max)(TIME/1000,(double)10000),(double)100000))break;
 	}
     fout<<"-1 -1 -1";
     fout.close();
