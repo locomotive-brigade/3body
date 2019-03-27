@@ -73,6 +73,7 @@ int main(){
     int x,y,cx,cy,bx,by;
     int kkk=200000000;
 	auto first=clock();
+	const int scrx=470,scry=160;
     while(1){
 //		fx=(750-a.x-b.x-c.y)/3;
 //		fy=(300-a.y-b.y-c.y)/3;
@@ -98,8 +99,8 @@ int main(){
 //		color(11);
 //		out(x,y,2);
 //		a.d+=0.1;
-		if(x>500||x<1)a.vx*=-1;
-		if(y>200||y<1)a.vy*=-1;
+		if(x>scrx||x<1)a.vx*=-1;
+		if(y>scry||y<1)a.vy*=-1;
 		
 		cx=c.x;cy=c.y;
 //		out(bx,by,' ');
@@ -116,8 +117,8 @@ int main(){
 //		cx=c.x;cy=c.y;
 //		color(6);
 //		out(cx,cy,2);
-		if(cx>500||cx<1)c.vx*=-1;
-		if(cy>200||cy<1)c.vy*=-1;
+		if(cx>scrx||cx<1)c.vx*=-1;
+		if(cy>scry||cy<1)c.vy*=-1;
 		
 		bx=b.x,by=b.y;
 //		out(bx,by,' ');
@@ -133,8 +134,8 @@ int main(){
 			t=0;
 			kkk--;
 		}
-		if(bx>500||bx<1)b.vx*=-1;
-		if(by>200||by<1)b.vy*=-1;
+		if(bx>scrx||bx<1)b.vx*=-1;
+		if(by>scry||by<1)b.vy*=-1;
 		force();
 		t+=100/v;
 		time+=100/v;
