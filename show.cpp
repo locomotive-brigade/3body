@@ -33,7 +33,7 @@ int main(){
 		}
 		con.mvprint(y,x,*p,"O");
 		con.flush();
-		con.sleep(t/800);
+		con.sleep(t/500);
 	}
 	con.cursor_set(true);
 	return 0;

@@ -42,11 +42,11 @@ int main(){
 	const int scrx=470,scry=160;
 	ofstream fout("save1.txt");
 	a.x=rand()%100+150;
-	a.y=rand()%100;
+	a.y=rand()%100+1;
 	b.x=rand()%200+150;
-	b.y=rand()%scry;
+	b.y=rand()%scry+1;
 	c.x=rand()%100+150;
-	c.y=rand()%100;
+	c.y=rand()%100+1;
     a.vx=rand()%73-36;
     a.vy=rand()%73-36;
     c.vx=rand()%73-36;
@@ -86,7 +86,7 @@ int main(){
 		v=10/sqrt(pow(a.x-b.x,2)+pow(a.y-b.y,2))+10/sqrt(pow(a.x-b.x,2)+pow(a.y-b.y,2))+10/sqrt(pow(c.x-b.x,2)+pow(c.y-b.y,2))+1;
 //		x=a.x;y=a.y;
 		v*=v;
-		v*=25;
+		v*=50;
 //		out(x,y,' ');
 		a.x+=a.vx*0.0001/v;
 		a.y+=a.vy*0.0001/v;
@@ -146,9 +146,9 @@ int main(){
 	}
     fout<<"-1 -1 -1";
     fout.close();
-    fout.open("time.txt");
+    /*fout.open("time.txt");
     fout<<time<<endl;
-    fout.close();
+    fout.close();*/
     return 0;
 }
 /*
