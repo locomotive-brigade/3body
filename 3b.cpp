@@ -39,11 +39,12 @@ void force(){
 int main(){
     int i,j,k,n,m;
     srand(time(0));
+	const int scrx=470,scry=160;
 	ofstream fout("save1.txt");
 	a.x=rand()%100+150;
 	a.y=rand()%100;
 	b.x=rand()%200+150;
-	b.y=rand()%200;
+	b.y=rand()%scry;
 	c.x=rand()%100+150;
 	c.y=rand()%100;
     a.vx=rand()%73-36;
@@ -73,7 +74,6 @@ int main(){
     int x,y,cx,cy,bx,by;
     int kkk=200000000;
 	auto first=clock();
-	const int scrx=470,scry=160;
     while(1){
 //		fx=(750-a.x-b.x-c.y)/3;
 //		fy=(300-a.y-b.y-c.y)/3;
