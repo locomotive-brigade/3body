@@ -30,7 +30,7 @@ It runs everywhere (in theory) (tested on *linux (g++)*)
 
 ## how to use it
 
-you should to make first:
+you should make first:
 
 ```bash
 make linux # for linux (g++)
